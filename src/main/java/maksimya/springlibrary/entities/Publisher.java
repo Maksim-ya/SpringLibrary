@@ -5,16 +5,12 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-/**
- * Created by User on 01/03/2017.
- */
-@Entity
+
 public class Publisher {
     private long id;
     private String name;
 
-    @Id
-    @Column(name = "id")
+
     public long getId() {
         return id;
     }
@@ -23,8 +19,7 @@ public class Publisher {
         this.id = id;
     }
 
-    @Basic
-    @Column(name = "name")
+
     public String getName() {
         return name;
     }

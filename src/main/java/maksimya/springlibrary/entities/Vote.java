@@ -5,17 +5,13 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-/**
- * Created by User on 01/03/2017.
- */
-@Entity
+
 public class Vote {
     private long id;
     private Integer value;
     private String username;
 
-    @Id
-    @Column(name = "id")
+
     public long getId() {
         return id;
     }
@@ -24,8 +20,7 @@ public class Vote {
         this.id = id;
     }
 
-    @Basic
-    @Column(name = "value")
+
     public Integer getValue() {
         return value;
     }
@@ -34,8 +29,7 @@ public class Vote {
         this.value = value;
     }
 
-    @Basic
-    @Column(name = "username")
+
     public String getUsername() {
         return username;
     }

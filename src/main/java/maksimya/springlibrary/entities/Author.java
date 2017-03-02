@@ -6,17 +6,13 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.sql.Date;
 
-/**
- * Created by User on 01/03/2017.
- */
-@Entity
+
 public class Author {
     private long id;
     private String fio;
     private Date birthday;
 
-    @Id
-    @Column(name = "id")
+
     public long getId() {
         return id;
     }
@@ -25,8 +21,7 @@ public class Author {
         this.id = id;
     }
 
-    @Basic
-    @Column(name = "fio")
+
     public String getFio() {
         return fio;
     }
@@ -35,8 +30,7 @@ public class Author {
         this.fio = fio;
     }
 
-    @Basic
-    @Column(name = "birthday")
+
     public Date getBirthday() {
         return birthday;
     }
