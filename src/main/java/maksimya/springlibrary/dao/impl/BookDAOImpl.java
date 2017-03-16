@@ -20,6 +20,7 @@ import java.util.List;
 
 @Component
 public class BookDAOImpl implements BookDAO {
+
     @Autowired
     private SessionFactory sessionFactory;
 
@@ -66,7 +67,7 @@ public class BookDAOImpl implements BookDAO {
     @Transactional
     @Override
     public List<Book> getBooks(Genre genre) {
-        List<Book> books = createBookList(createBookCriteria().add(Restrictions.ilike("author.fio", genre.getName(), MatchMode.ANYWHERE)));
+        List<Book> books = createBookList(createBookCriteria().add(Restrictions.eq("genre.id", genre.getId())));
         return books;
     }
 
@@ -97,4 +98,9 @@ public class BookDAOImpl implements BookDAO {
         criteria.addOrder(Order.asc("b.name")).setProjection(bookProjection).setResultTransformer(Transformers.aliasToBean(Book.class));
         return criteria.list();
     }
+
+
+
+
+
 }

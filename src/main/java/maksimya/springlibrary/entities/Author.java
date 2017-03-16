@@ -12,6 +12,11 @@ public class Author {
     private String fio;
     private Date birthday;
 
+    public Author(String fio) {
+        this.fio=fio;
+    }
+    public Author() {
+    }
 
     public long getId() {
         return id;

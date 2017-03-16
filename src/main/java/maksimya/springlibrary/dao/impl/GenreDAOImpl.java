@@ -15,8 +15,8 @@ public class GenreDAOImpl implements GenreDAO {
     @Autowired
     private SessionFactory sessionFactory;
 
-    @Transactional
     @Override
+    @Transactional
     public List<Genre> getGenres() {
         return sessionFactory.getCurrentSession().createCriteria(Genre.class).list();
     }
